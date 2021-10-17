@@ -91,6 +91,25 @@ class _MyHomepageState extends State<MyHomepage> {
                       });
                     },
                     child: Text("Call the Developer")),
+                //TODO NEW UPDATE
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        launch(
+                            'sms:9716588403?body=This is the body of the SMS');
+                      });
+                    },
+                    child: Text("SMS")),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        // launch('mailto:prabir0712@gmail.com');
+                        launch(
+                            'mailto:prabir0712@gmail.com?subject=This is subject Title&body=This is body of Email');
+                      });
+                    },
+                    child: Text("MAIL")),
+
                 FutureBuilder(
                     future: C,
                     builder:
