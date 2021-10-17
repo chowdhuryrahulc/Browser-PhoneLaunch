@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:share/share.dart';
 
 class MyHomepage extends StatefulWidget {
   const MyHomepage({Key? key}) : super(key: key);
@@ -109,6 +110,12 @@ class _MyHomepageState extends State<MyHomepage> {
                       });
                     },
                     child: Text("MAIL")),
+                ElevatedButton(
+                    onPressed: () {
+                      Share.share(
+                          'Cheak out this free flashcards app! https://schools.app');
+                    },
+                    child: Text("Share")),
 
                 FutureBuilder(
                     future: C,
